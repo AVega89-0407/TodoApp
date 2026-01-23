@@ -1,0 +1,66 @@
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import TodoList from "../components/TodoList";
+
+function TodoForm() {
+    const navigate = useNavigate();
+  const [todos,setTodos] = useState([])
+
+
+  const [newTodo,setNewTodo] = useState("")
+
+  function handleClickTodo(e) {
+    e.preventDefault();
+    setTodos([...todos, newTodo]);
+    setNewTodo("");
+
+  }
+
+    function handleRemoveTodo(indexToRemove) {  
+    setTodos(todos.filter((_, index) => index !== indexToRemove));
+  }
+
+//   function handleCountTodos() {
+//     return todos.length;
+//   }
+
+  function handleShowAll() {
+    return todos.length;
+  }
+
+  function handleShowActive() {
+    return todos.length;
+  }
+
+  function handleShowCompleted() {
+    return todos.length;
+  }
+    
+  return (
+    <>
+    <form>
+      <input 
+      value={newTodo} 
+      onChange={(e) => setNewTodo(e.target.value)}
+      placeholder="Skriv in din todo här"
+      type="text"
+      />
+      
+
+    <button onClick={handleClickTodo}>Lägg till</button>
+
+    </form>
+
+          <TodoList todosArr={todos} onRemove={handleRemoveTodo}/>
+      
+
+      {/* <p>Antal: {handleCountTodos()}</p> */}
+
+      <button>Alla ({handleShowAll()})</button>
+      <button>Aktiva ({handleShowActive()})</button>
+      <button>Avklarade ({handleShowCompleted()})</button>  
+    </>
+  )
+}
+
+export default TodoForm
