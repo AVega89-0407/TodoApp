@@ -1,8 +1,11 @@
 import { useState } from "react";
 import TodoList from "../components/TodoList";
 import TodoHeader from "../components/TodoHeader";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function AllTodos() {
+  const navigate = useNavigate();
 
   const [todos,setTodos] = useState([
     "lära mig React",
@@ -27,18 +30,6 @@ function AllTodos() {
     return todos.length;
   }
 
-  function handleShowAll() {
-    return todos.length;    
-  }
-
-  function handleShowActive() {
-    return todos.length;
-  }
-
-  function handleShowCompleted() {
-    return todos.length;
-  }
-
   return (
     <>
     <button onClick={() => navigate(-1)}>Back</button>
@@ -58,11 +49,7 @@ function AllTodos() {
       
 
       <p>Antal: {handleCountTodos()}</p>
-
-
-      <button>Alla ({handleShowAll()})</button>
-      <button>Aktiva ({handleShowActive()})</button>
-      <button>Avklarade ({handleShowCompleted()})</button>
+    <Navbar />
     </>
   );
 }

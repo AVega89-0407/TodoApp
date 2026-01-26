@@ -10,15 +10,39 @@ main {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   color: #7F9C97;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   padding-left: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.weather {
+  align-items: center;
+}
+
+.weathercelsius {
+font-size: 0.9rem;
+margin: 1px;
+}
+
+.weathericon {
+  font-size: 0.9rem;
+  padding: 5px;
+  margin-top: 1px;
+}
+
+img {
+margin-bottom: 1px;
 }
 
 p {
   font-size: 1.2rem;
+  color: #7F9C97;
+  font-weight: bold;
 }
 
 h2 {
@@ -35,6 +59,11 @@ h2 {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #7F9C97;
+}
+
+.calender button {
+  color: #7F9C97;
 }
 
 input {
@@ -81,23 +110,28 @@ li button {
 }
 
 input[type="checkbox"] {
-  display: none;
-}
+  -webkit-appearance: none;
+  appearance: none;
 
-.checkMark {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #7F9C97;
   border-radius: 50%;
-  display: inline-block;
-  margin-right: 0.5rem;
-  vertical-align: middle;
   cursor: pointer;
+
+  display: grid;
+  place-content: center;
+  align-self: center;
 }
 
-input[type="checkbox"]:checked + .checkMark {
+input[type="checkbox"]:checked {
   background-color: #7F9C97;
-  border-color: #7F9C97;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✓";
+  color: white;
+  font-size: 14px;
 }
 
 button {

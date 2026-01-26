@@ -1,3 +1,5 @@
+import WeatherApi from "../services/WeatherApi";
+
 function TodoHeader() {
 
       function showDate() {
@@ -14,8 +16,11 @@ function TodoHeader() {
   return (
     <>
     <header>
+      <article>
     <h2>Min dag</h2>
     <p className="date">{showDate()}</p>
+    </article>
+    <WeatherApi />
     </header>
     </>
   )

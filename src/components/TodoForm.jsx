@@ -24,17 +24,6 @@ function TodoForm() {
 //     return todos.length;
 //   }
 
-  function handleShowAll() {
-    return todos.length;
-  }
-
-  function handleShowActive() {
-    return todos.length;
-  }
-
-  function handleShowCompleted() {
-    return todos.length;
-  }
     
   return (
     <>
@@ -56,9 +45,6 @@ function TodoForm() {
 
       {/* <p>Antal: {handleCountTodos()}</p> */}
 
-      <button>Alla ({handleShowAll()})</button>
-      <button>Aktiva ({handleShowActive()})</button>
-      <button>Avklarade ({handleShowCompleted()})</button>  
     </>
   )
 }
