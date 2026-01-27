@@ -8,9 +8,9 @@ function AllTodos() {
   const navigate = useNavigate();
 
   const [todos,setTodos] = useState([
-    "lära mig React",
-    "åka å handla",
-    "lära oss props"
+    "Lära mig React",
+    "Åka och handla",
+    "Lära mig props"
   ])
 
 
@@ -32,7 +32,7 @@ function AllTodos() {
 
   return (
     <>
-    <button onClick={() => navigate(-1)}>Back</button>
+    <button onClick={() => navigate('/')}>Back</button>
     <TodoHeader />
     
 

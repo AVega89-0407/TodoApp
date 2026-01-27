@@ -32,11 +32,11 @@ margin: 1px;
 .weathericon {
   font-size: 0.9rem;
   padding: 5px;
-  margin-top: 1px;
+  margin: 1px;
 }
 
 img {
-margin-bottom: 1px;
+margin-bottom: -15px;
 }
 
 p {
@@ -143,4 +143,8 @@ button {
   border: none;
   border-radius: 4px;
   margin-left: 0.5rem;
+}
+
+.active button {
+  text-decoration: underline;
 }

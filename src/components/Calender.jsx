@@ -7,8 +7,14 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 
 export default function BasicDateCalendar() {
   return (
+    //Använd dayjs för datum och visa allt på svenska
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale='sv'>
       <DateCalendar className='calender' />
     </LocalizationProvider>
   );
 }
+
+
+//LocalizationProvider = inställningsbox
+// AdapterDayjs = översättare mellan MUI och dayjs
+// DateCalendar = själva kalendern

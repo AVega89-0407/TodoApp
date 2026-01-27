@@ -7,16 +7,16 @@ function Navbar() {
     
       const [newTodo,setNewTodo] = useState("")
     
-      function handleClickTodo() {
-        setTodos([...todos, newTodo]);
-        setNewTodo("");
+//       function handleClickTodo() {
+//         setTodos([...todos, newTodo]);
+//         setNewTodo("");
     
-      }
+//       }
 
       
-  function handleCountTodos() {
-    return todos.length;
-  }
+//   function handleCountTodos() {
+//     return todos.length;
+//   }
 
       function handleShowAll() {
     return todos.length;    
@@ -33,8 +33,8 @@ function Navbar() {
     <>
     <section className="navlinks">
         <NavLink to="/alltodos"><button>Alla ({handleShowAll()})</button></NavLink>
-      <NavLink><button>Aktiva ({handleShowActive()})</button></NavLink>
-      <NavLink><button>Avklarade ({handleShowCompleted()})</button></NavLink>
+      <NavLink to="/activetodos"><button>Aktiva ({handleShowActive()})</button></NavLink>
+      <NavLink to="/completedtodos"><button>Avklarade ({handleShowCompleted()})</button></NavLink>
       </section>
     </>
   )

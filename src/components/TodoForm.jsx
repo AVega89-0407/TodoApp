@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import TodoList from "../components/TodoList";
 
 function TodoForm() {
-    const navigate = useNavigate();
   const [todos,setTodos] = useState([])
 
 
