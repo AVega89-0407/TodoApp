@@ -6,12 +6,12 @@ import AllTodos from './pages/AllTodos'
 import Navbar from './components/Navbar'
 import ActiveTodos from './pages/ActiveTodos'
 import CompletedTodos from './pages/CompletedTodos'
+import NotFound from './pages/NotFound'
 
 function App() {
 
   return (
     <>
-      <h1>Todo App</h1>
 <Routes>
   <Route path='/' element={<MainLayout />}>
     <Route index element={<MainTodos />} />
@@ -20,6 +20,8 @@ function App() {
     <Route path='/completedtodos' element={<CompletedTodos />} />
     <Route path='/navbar' element={<Navbar />} />
   </Route>
+
+  <Route path='*' element={<NotFound />} />
 </Routes>
     </>
   )
