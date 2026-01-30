@@ -1,40 +1,17 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
-      const [todos,setTodos] = useState([])
-    
-    
-      const [newTodo,setNewTodo] = useState("")
-    
-//       function handleClickTodo() {
-//         setTodos([...todos, newTodo]);
-//         setNewTodo("");
-    
-//       }
-
-      
-//   function handleCountTodos() {
-//     return todos.length;
-//   }
-
-      function handleShowAll() {
-    return todos.length;    
-  }
-
-  function handleShowActive() {
-    return todos.length;
-  }
-
-  function handleShowCompleted() {
-    return todos.length;
-  }
+function Navbar({ todos }) {
+  const all = todos.length;
+  const active = todos.filter(t => !t.completed).length;
+  const completed = todos.filter(t => t.completed).length;
   return (
     <>
+    
     <section className="navlinks">
-        <NavLink to="/alltodos"><button>Alla ({handleShowAll()})</button></NavLink>
-      <NavLink to="/activetodos"><button>Aktiva ({handleShowActive()})</button></NavLink>
-      <NavLink to="/completedtodos"><button>Avklarade ({handleShowCompleted()})</button></NavLink>
+      <NavLink to="/"><a>Min dag</a></NavLink>
+      <NavLink to="/alltodos"><a>Alla ({all})</a></NavLink>
+      <NavLink to="/activetodos"><a>Aktiva ({active})</a></NavLink>
+      <NavLink to="/completedtodos"><a>Klara ({completed})</a></NavLink>
       </section>
     </>
   )

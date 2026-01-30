@@ -1,6 +1,6 @@
 import TodoItem from "./TodoItem";
 
-function TodoList({ todosArr, onRemove }) {
+function TodoList({ todosArr }) {
 
   return (
     <ul>
@@ -9,9 +9,7 @@ function TodoList({ todosArr, onRemove }) {
        return (
        <TodoItem 
        key={index} 
-       text={todo} 
-       onRemove={() => onRemove(index)}
-
+       text={todo.text} 
        />
        )
       })}

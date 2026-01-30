@@ -9,6 +9,61 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+aside {
+  display: flex;
+  background-color: #c9d8d3;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 1rem;
+    padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #355a55;
+  text-decoration: none;
+  
+}
+
+a {
+  text-decoration: none;
+  background-color: #7F9C97;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #fff;
+}
+
+a:hover {
+  background-color: #c9d8d3;
+}
+
+a:active {
+  color: #c9d8d3;
+}
+
+a:link {
+  color: #7F9C97;
+}
+
+a:visited {
+  color: #355a55;
+  text-decoration: underline;
+}
+
+form {
+  padding: 10px;
+  align-self: flex-end;
+}
+
+form button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
@@ -66,14 +121,20 @@ h2 {
   color: #7F9C97;
 }
 
+h3 {
+   color: #7F9C97;
+   font-weight: bold; 
+}
+
 input {
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 14px;
   margin-right: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
   margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 input:focus {
@@ -136,7 +197,7 @@ input[type="checkbox"]:checked::before {
 
 button {
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 14px;
   cursor: pointer;
   background-color: #7F9C97;
   color: white;
@@ -145,6 +206,6 @@ button {
   margin-left: 0.5rem;
 }
 
-.active button {
-  text-decoration: underline;
-}
+
+
+
