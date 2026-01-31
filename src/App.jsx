@@ -28,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<MainTodos 
+            todos={todos}
             addTodo={addTodo} 
             removeTodo={removeTodo}/>} />
 
