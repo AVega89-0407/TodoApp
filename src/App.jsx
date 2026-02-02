@@ -8,6 +8,9 @@ import ActiveTodos from "./pages/ActiveTodos";
 import CompletedTodos from "./pages/CompletedTodos";
 import NotFound from "./pages/NotFound";
 import SideBar from "./pages/SideBar";
+import CalenderPage from "./pages/CalenderPage";
+import TodoHeader from "./components/TodoHeader";
+
 
 function App() {
   
@@ -23,17 +26,19 @@ function App() {
   }
   return (
     <>
+    <TodoHeader />
+    <div className="layout">
       <aside>
         <SideBar todos={todos} addTodo={addTodo}/>
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<MainTodos 
             todos={todos}
-            addTodo={addTodo} 
             removeTodo={removeTodo}/>} />
 
             <Route path="/alltodos" element={<AllTodos
             todos={todos}
+            addTodo={addTodo} 
             removeTodo={removeTodo}
              />} />
 
@@ -46,11 +51,13 @@ function App() {
             todos={todos.filter(t => t.completed)}
                 removeTodo={removeTodo}
                />} />
+               <Route path="/calenderpage" element={<CalenderPage />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />
         </Routes>
       </aside>
+      </div>
     </>
   );
 }

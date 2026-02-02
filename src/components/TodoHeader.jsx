@@ -17,7 +17,7 @@ function TodoHeader() {
     <>
     <header>
       <article>
-    <h2>Min dag</h2>
+    <h2>Välkommen</h2>
     <p className="date">{showDate()}</p>
     </article>
     <WeatherApi />

@@ -9,16 +9,16 @@ function Navbar() {
     <section className="navlinks">
       <NavLink to="/">
       <FaHome />
-      <a>Hem</a></NavLink>
+      <span>Hem</span></NavLink>
       <NavLink to="/alltodos">
       <FaList />
-      <a>Alla uppgifter</a></NavLink>
+      <span>Alla uppgifter</span></NavLink>
       <NavLink to="/activetodos">
       <FaSun />
-      <a>Min dag</a></NavLink>
-      <NavLink to="/completedtodos">
+      <span>Min dag</span></NavLink>
+      <NavLink to="/calenderpage">
       <FaCalendarAlt />
-      <a>Kalender</a></NavLink>
+      <span>Kalender</span></NavLink>
       </section>
     </>
   )

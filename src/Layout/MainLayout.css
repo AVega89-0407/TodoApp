@@ -1,16 +1,13 @@
-body {
-  
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #F9FAFB;
+* {
+  box-sizing: border-box;
 }
 
+.layout {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background: white;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -18,17 +15,16 @@ h1 {
 }
 
 main {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: url('/src/assets/eucalyptus-silver-dollar-white-marble-background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  flex: 1;
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
 }
 
 aside {
+  width: 100%;
   display: flex;
   background-color: #c9d8d3;
   border-radius: 8px;
@@ -43,6 +39,10 @@ aside {
   border: 2px solid #355a55;
 }
 
+.greeting {
+  margin-left: 8px;
+}
+
 .navlinks {
   display: flex;
   flex-direction: column;
@@ -55,34 +55,38 @@ aside {
   margin-top: 8px;
 }
 
-a {
-  text-decoration: none;
-  background-color: #7F9C97;
-  padding: 1rem;
-  border-radius: 8px;
-  color: #fff;
-}
-
-a:hover {
-  background-color: #c9d8d3;
-}
-
-a:active {
-  color: #c9d8d3;
-}
-
-a:link {
-  color: #7F9C97;
-}
-
-a:visited {
+span {
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 500;
   color: #355a55;
-  text-decoration: underline;
+  text-decoration: none;
+  margin: 8px;
+}
+
+.active {
+  font-weight: bold;
+  color: #7F9C97;
+  text-decoration: none;
+}
+
+.navtodos {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #355a55;
+  text-decoration: none;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 form {
   padding: 10px;
-  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
 form button {
@@ -174,7 +178,7 @@ ul {
   border-radius: 8px;
 } 
 
-&.done {
+.done {
   text-decoration: line-through;
   color: #7F9C97;
 }

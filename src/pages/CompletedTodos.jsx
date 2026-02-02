@@ -7,7 +7,6 @@ function CompletedTodos({ todos, onRemove, onToggle }) {
     
       return (
         <>
-        <TodoHeader />
         <Navigation />
     
           <TodoList         

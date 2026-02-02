@@ -7,7 +7,6 @@ function ActiveTodos({ todos, onRemove, onToggle }) {
     
       return (
         <>
-        <TodoHeader />
         <Navigation />
           <TodoList 
         todosArr={todos}

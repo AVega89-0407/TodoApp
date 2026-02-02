@@ -1,20 +1,43 @@
 import TodoList from "../components/TodoList";
 import TodoHeader from "../components/TodoHeader";
 import Navigation from "../components/Navigation";
+import TodoForm from "../components/TodoForm";
+
+import { FaList, FaCheck, FaClock } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 
-function AllTodos({ todos, onRemove, onToggle }) {
+function AllTodos({ todos = [], addTodo, removeTodo }) {
+  const all = todos.length;
+  const active = todos.filter(t => !t.completed).length;
+  const completed = todos.filter(t => t.completed).length;
 
   return (
     <>
-      <TodoHeader />
+  
       <Navigation />
-      <TodoList todosArr={todos}
-        onRemove={onRemove}
-        onToggle={onToggle}/>
-      
 
-      <p>Antal: {todos.length}</p>
+
+      <section className="navtodos">
+        <NavLink to="/alltodos"
+        className={({ isActive }) => isActive ? "active" : ""}>
+          <FaList />
+          <span>Alla ({all})</span>
+        </NavLink>
+
+        <NavLink to="/activetodos">
+          <FaClock />
+          <span>Aktiva ({active})</span>
+        </NavLink>
+
+        <NavLink to="/completedtodos">
+          <FaCheck />
+          <span>Klara ({completed})</span>
+        </NavLink>
+      </section>
+      
+       <TodoForm onAddTodo={addTodo} />
+      <TodoList todosArr={todos} onRemove={removeTodo} />
     </>
   );
 }
