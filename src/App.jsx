@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import MainLayout from "./Layout/MainLayout";
-import MainTodos from "./pages/MainTodos";
+import MyDay from "./pages/MyDay";
 import AllTodos from "./pages/AllTodos";
 import ActiveTodos from "./pages/ActiveTodos";
 import CompletedTodos from "./pages/CompletedTodos";
@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import SideBar from "./pages/SideBar";
 import CalenderPage from "./pages/CalenderPage";
 import TodoHeader from "./components/TodoHeader";
-
+import Home from "./pages/Home";
 
 function App() {
   
@@ -32,9 +32,7 @@ function App() {
         <SideBar todos={todos} addTodo={addTodo}/>
         <Routes>
           <Route path="/" element={<MainLayout />}>
-            <Route index element={<MainTodos 
-            todos={todos}
-            removeTodo={removeTodo}/>} />
+          <Route index element={<Home />} />
 
             <Route path="/alltodos" element={<AllTodos
             todos={todos}
@@ -51,7 +49,8 @@ function App() {
             todos={todos.filter(t => t.completed)}
                 removeTodo={removeTodo}
                />} />
-               <Route path="/calenderpage" element={<CalenderPage />} />
+               <Route path="/calenderpage" element={<CalenderPage todos={todos}/>} />
+               <Route path="/myday" element={<MyDay />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />

@@ -13,7 +13,7 @@ function Navbar() {
       <NavLink to="/alltodos">
       <FaList />
       <span>Alla uppgifter</span></NavLink>
-      <NavLink to="/activetodos">
+      <NavLink to="/myday">
       <FaSun />
       <span>Min dag</span></NavLink>
       <NavLink to="/calenderpage">

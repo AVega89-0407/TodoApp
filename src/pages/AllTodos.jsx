@@ -1,5 +1,4 @@
 import TodoList from "../components/TodoList";
-import TodoHeader from "../components/TodoHeader";
 import Navigation from "../components/Navigation";
 import TodoForm from "../components/TodoForm";
 
@@ -17,6 +16,10 @@ function AllTodos({ todos = [], addTodo, removeTodo }) {
   
       <Navigation />
 
+      <h3>Alla uppgifter</h3>
+
+      <TodoForm onAddTodo={addTodo} />
+      <TodoList todosArr={todos} onRemove={removeTodo} />
 
       <section className="navtodos">
         <NavLink to="/alltodos"
@@ -35,9 +38,6 @@ function AllTodos({ todos = [], addTodo, removeTodo }) {
           <span>Klara ({completed})</span>
         </NavLink>
       </section>
-      
-       <TodoForm onAddTodo={addTodo} />
-      <TodoList todosArr={todos} onRemove={removeTodo} />
     </>
   );
 }
