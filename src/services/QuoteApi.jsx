@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FaCommentDots } from "react-icons/fa";
 
 function QuoteApi() {
 const [quote, setQuote] = useState(null);
@@ -30,7 +31,9 @@ if (error) {
 
   return (
     <>
-    <p>"{quote}" <br /><br /> <i>{author}</i></p>
+    
+    <p><FaCommentDots />Dagens citat: <br /> <br /> 
+    "{quote}" <br /><br /> - <i>{author}</i></p>
     </>
   )
 }

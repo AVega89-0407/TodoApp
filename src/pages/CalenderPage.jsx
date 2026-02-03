@@ -15,7 +15,7 @@ function CalenderPage({ todos }) {
       <div className="card"><FaList /> Alla: {all}</div>
       <div className="card"><FaClock /> Aktiva: {active}</div>
       <div className="card"><FaCheck /> Klara: {done}</div>
-      <div className="card">{<Calender />}</div>
+      <Calender />
     </section>
     </>
   )

@@ -1,6 +1,9 @@
 import Greeting from "../components/Greeting";
 import WeatherApi from "../services/WeatherApi";
 import QuoteApi from "../services/QuoteApi";
+import Calender from "../components/Calender";
+
+import { FaEnvelope, FaList } from "react-icons/fa";
 
 
 function Home() {
@@ -8,10 +11,12 @@ function Home() {
     <>
     <p className="greeting">{<Greeting />}</p>
        <section className="widgets">
-          <div className="card"> {<WeatherApi />}</div>
-          <div className="card"></div>
-          <div className="card"></div>
+          <div className="card"><FaList />Att göra idag: </div>
+          <div className="card"><FaEnvelope />Inkorg</div>
+          <Calender />
+          <div className="card">{<WeatherApi />}</div>
           <div className="card">{<QuoteApi />}</div>
+          <div className="card"></div>
         </section>
     </>
   )
