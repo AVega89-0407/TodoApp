@@ -18,11 +18,25 @@ function App() {
 
   function addTodo(text) {
     
-    setTodos([...todos, { text, completed: false }]);
+    setTodos([...todos, { 
+      id: crypto.randomUUID(),
+      text, 
+      completed: false 
+    }]);
   }
 
-  function removeTodo(index) {
-    setTodos(todos.filter((_, i) => i !== index));
+  function toggleTodo(id) {
+  setTodos(
+    todos.map((todo =>
+      todo.id === id 
+      ? { ...todo, completed: !todo.completed } 
+      : todo
+    ))
+  );
+}
+
+  function removeTodo(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
   }
   return (
     <>
@@ -38,16 +52,19 @@ function App() {
             todos={todos}
             addTodo={addTodo} 
             removeTodo={removeTodo}
+            onToggle={toggleTodo}
              />} />
 
             <Route path="/activetodos" element={<ActiveTodos 
             todos={todos.filter(t => !t.completed)}
                 removeTodo={removeTodo}
+                onToggle={toggleTodo}
                 />} />
 
             <Route path="/completedtodos" element={<CompletedTodos
             todos={todos.filter(t => t.completed)}
                 removeTodo={removeTodo}
+                onToggle={toggleTodo}
                />} />
                <Route path="/calenderpage" element={<CalenderPage todos={todos}/>} />
                <Route path="/myday" element={<MyDay />} />

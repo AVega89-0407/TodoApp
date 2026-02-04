@@ -298,3 +298,27 @@ button {
 }
 
 
+.timeline-container {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.timeline-container span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.timeline-container ul {
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.timeline-container li {
+  background-color: #F9F9F9;
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: none;
+}

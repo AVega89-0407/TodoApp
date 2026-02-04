@@ -1,5 +1,5 @@
 # 📅 Todo App
-En simpel Todo App där du kan lägga till dina uppgifter men även kunna se kalender, strukturera upp hur din dag ska se ut, se vädret och få se dagens citat.  
+En simpel Todo App där du kan lägga till dina uppgifter men även kunna se kalender, du kan se hur din strukurerade ser ut, se vädret och få se dagens citat. Appen är gjord med "Dashboard" känsla. 
 
 ## 🌟 Uppfyllda krav
 - **SPA + Routing (React Router)**
@@ -72,14 +72,14 @@ src/
 ├── App.jsx
 ├── main.jsx
 ```
-## 📸 Screenshots
+## 📸 Screenshot
 
 **Home.jsx**
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## 👤 Author
 
 🌸 **Andrea Vega Piñones**
 
-📍 React project for learning and practical use
+📍 React project for learning and practical use.

@@ -23,7 +23,7 @@ useEffect(() => {
 
 
 if (loading) {
-    return <p>Loading...</p>;
+    return <p>Data laddas...</p>;
   }
 if (error) {
     return <p>Error: {error}</p>;

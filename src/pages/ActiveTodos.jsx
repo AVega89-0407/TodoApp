@@ -1,8 +1,7 @@
 import Navigation from "../components/Navigation";
-import TodoHeader from "../components/TodoHeader";
 import TodoList from "../components/TodoList";
 
-function ActiveTodos({ todos, onRemove, onToggle }) {
+function ActiveTodos({ todos, removeTodo, onToggle }) {
 
     
       return (
@@ -10,7 +9,7 @@ function ActiveTodos({ todos, onRemove, onToggle }) {
         <Navigation />
           <TodoList 
         todosArr={todos}
-        onRemove={onRemove}
+        onRemove={removeTodo}
         onToggle={onToggle}/>
           
     

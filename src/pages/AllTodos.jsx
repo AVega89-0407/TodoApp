@@ -1,13 +1,12 @@
 import TodoList from "../components/TodoList";
 import Navigation from "../components/Navigation";
 import TodoForm from "../components/TodoForm";
-import Calender from "../components/Calender";
 
 import { FaList, FaCheck, FaClock } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 
-function AllTodos({ todos = [], addTodo, removeTodo }) {
+function AllTodos({ todos = [], addTodo, removeTodo, onToggle }) {
   const all = todos.length;
   const active = todos.filter(t => !t.completed).length;
   const completed = todos.filter(t => t.completed).length;
@@ -20,7 +19,10 @@ function AllTodos({ todos = [], addTodo, removeTodo }) {
       <h3>Alla uppgifter</h3>
 
       <TodoForm onAddTodo={addTodo} />
-      <TodoList todosArr={todos} onRemove={removeTodo} />
+      <TodoList 
+      todosArr={todos} 
+      onRemove={removeTodo}
+      onToggle={onToggle} />
 
       <section className="navtodos">
         <NavLink to="/alltodos"

@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 
 export default function CustomizedTimeline() {
   return (
+    <div className="timeline-container">
     <Timeline position="alternate">
       <TimelineItem>
         <TimelineOppositeContent
@@ -90,5 +91,6 @@ export default function CustomizedTimeline() {
         </TimelineContent>
       </TimelineItem>
     </Timeline>
+    </div>
   );
 }
