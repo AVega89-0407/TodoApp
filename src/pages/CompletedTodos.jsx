@@ -1,5 +1,4 @@
 import TodoList from "../components/TodoList";
-import TodoHeader from "../components/TodoHeader";
 import Navigation from "../components/Navigation";
 
 function CompletedTodos({ todos, removeTodo , onToggle }) {

@@ -72,6 +72,7 @@ span {
   color: #202020;
   text-decoration: none;
   margin: 8px;
+  transition: background-color 0.3s ease;
 }
 
 span:hover {
@@ -285,6 +286,7 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .card:hover {
